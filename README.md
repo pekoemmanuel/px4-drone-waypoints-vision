@@ -90,7 +90,7 @@ The GIF shows the camera view with the detection box and the tracking state. Thi
 
 **Flight video.** [`results/simulation_vol.mp4`](
 
-https://github.com/user-attachments/assets/a7f12d11-541c-4293-b62c-20c461c47693
+https://github.com/user-attachments/assets/203b3b75-ee37-4adb-95c6-759c0adcccd9
 
 ) (72 s, 5.4 MB) is a screen recording of the tracking flight analysed above: the figures, the GIF and the camera rate all come from this same run, made with the Gazebo window open. It shows the Gazebo window (external view, with the red target) next to QGroundControl (mode, battery, distance from the start, heading). The GIF shows what the drone sees, the video shows what the drone does. The map is PX4's default simulated home position, not a real location.
 
