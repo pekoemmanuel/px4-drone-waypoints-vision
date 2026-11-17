@@ -88,7 +88,11 @@ About 47 s from arming to the end of the landing. The target was seen on every i
 
 The GIF shows the camera view with the detection box and the tracking state. This flight was run with the Gazebo window open, as in the video below. The camera delivered about 8 images/s, so the GIF plays about 25 % faster than real time.
 
-**Flight video.** [`results/simulation_vol.mp4`](results/simulation_vol.mp4) (72 s, 5.4 MB) is a screen recording of the tracking flight analysed above: the figures, the GIF and the camera rate all come from this same run, made with the Gazebo window open. It shows the Gazebo window (external view, with the red target) next to QGroundControl (mode, battery, distance from the start, heading). The GIF shows what the drone sees, the video shows what the drone does. The map is PX4's default simulated home position, not a real location.
+**Flight video.** [`results/simulation_vol.mp4`](
+
+https://github.com/user-attachments/assets/a7f12d11-541c-4293-b62c-20c461c47693
+
+) (72 s, 5.4 MB) is a screen recording of the tracking flight analysed above: the figures, the GIF and the camera rate all come from this same run, made with the Gazebo window open. It shows the Gazebo window (external view, with the red target) next to QGroundControl (mode, battery, distance from the start, heading). The GIF shows what the drone sees, the video shows what the drone does. The map is PX4's default simulated home position, not a real location.
 
 [![Screen recording of the tracking flight](results/simulation_vol_poster.jpg)](results/simulation_vol.mp4)
 
