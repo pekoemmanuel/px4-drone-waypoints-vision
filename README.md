@@ -2,7 +2,7 @@
 
 [Lire en français](README.fr.md)
 
-A simulated quadcopter (PX4 x500) that takes off, flies a waypoint mission under ROS 2 offboard control, detects a coloured target with its onboard camera, and tracks it in closed loop. Everything runs on a modest laptop (ThinkPad L450, 15 GiB RAM, Ubuntu 24.04), with Gazebo running without its GUI.
+A simulated quadcopter (PX4 x500) that takes off, flies a waypoint mission under ROS 2 offboard control, detects a coloured target with its onboard camera, and tracks it in closed loop. Everything runs on a modest laptop (ThinkPad L450, 15 GiB RAM, Ubuntu 24.04), with Gazebo, which can run without its window to keep the camera rate up.
 
 ![Repeatability of the waypoint mission](results/repetabilite.png)
 
@@ -86,7 +86,11 @@ About 47 s from arming to the end of the landing. The target was seen on every i
 
 ![Annotated camera view during the tracking flight](results/suivi_camera.gif)
 
-The GIF shows the camera view with the detection box and the tracking state. The camera delivered about 8 images/s during this flight, so the GIF plays about 25 % faster than real time.
+The GIF shows the camera view with the detection box and the tracking state. This flight was run with the Gazebo window open, as in the video below. The camera delivered about 8 images/s, so the GIF plays about 25 % faster than real time.
+
+**Flight video.** [`results/simulation_vol.mp4`](results/simulation_vol.mp4) (72 s, 5.4 MB) is a screen recording of the tracking flight analysed above: the figures, the GIF and the camera rate all come from this same run, made with the Gazebo window open. It shows the Gazebo window (external view, with the red target) next to QGroundControl (mode, battery, distance from the start, heading). The GIF shows what the drone sees, the video shows what the drone does. The map is PX4's default simulated home position, not a real location.
+
+[![Screen recording of the tracking flight](results/simulation_vol_poster.jpg)](results/simulation_vol.mp4)
 
 **Apparent size of the target.** Fitted on the 211 images of this flight (altitude 3 m): size ≈ 0.65 % × (10 m / distance)^2.03, the inverse-square law expected from geometry. The stand-off distance follows from it.
 
@@ -140,7 +144,7 @@ Tested on Ubuntu 24.04 with ROS 2 Jazzy and the Gazebo (`gz sim`) version instal
 Open one terminal per step, in this order:
 
 ```bash
-# 1. Simulation without the Gazebo window
+# 1. Simulation without the Gazebo window (drop HEADLESS=1 to watch the flight or record a video)
 cd ~/PX4-Autopilot && HEADLESS=1 make px4_sitl gz_x500_mono_cam
 
 # 2. PX4 <-> ROS 2 link

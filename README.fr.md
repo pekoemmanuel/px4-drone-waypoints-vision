@@ -2,7 +2,7 @@
 
 [Read in English](README.md)
 
-Un quadricoptère simulé (PX4 x500) qui décolle, exécute une mission par waypoints sous contrôle « offboard » ROS 2, détecte une cible colorée avec sa caméra embarquée et la suit en boucle fermée. Tout tourne sur un ordinateur portable modeste (ThinkPad L450, 15 Gio de RAM, Ubuntu 24.04), avec Gazebo lancé sans interface graphique.
+Un quadricoptère simulé (PX4 x500) qui décolle, exécute une mission par waypoints sous contrôle « offboard » ROS 2, détecte une cible colorée avec sa caméra embarquée et la suit en boucle fermée. Tout tourne sur un ordinateur portable modeste (ThinkPad L450, 15 Gio de RAM, Ubuntu 24.04), avec Gazebo, qui peut tourner sans sa fenêtre pour maintenir la cadence de la caméra.
 
 ![Répétabilité de la mission par waypoints](results/repetabilite.png)
 
@@ -86,7 +86,11 @@ Environ 47 s de l'armement à la fin de l'atterrissage. La cible a été vue sur
 
 ![Vue de la caméra annotée pendant le vol de suivi](results/suivi_camera.gif)
 
-Le GIF montre la vue de la caméra avec le cadre de détection et l'état du suivi. La caméra a fourni environ 8 images/s pendant ce vol, donc le GIF se lit environ 25 % plus vite que le temps réel.
+Le GIF montre la vue de la caméra avec le cadre de détection et l'état du suivi. Ce vol a été effectué avec la fenêtre Gazebo ouverte, comme sur la vidéo ci-dessous. La caméra a fourni environ 8 images/s, donc le GIF se lit environ 25 % plus vite que le temps réel.
+
+**Vidéo du vol.** [`results/simulation_vol.mp4`](results/simulation_vol.mp4) (72 s, 5,4 Mo) est un enregistrement d'écran du vol de suivi analysé ci-dessus : les figures, le GIF et la cadence de la caméra viennent tous de ce même vol, effectué avec la fenêtre Gazebo ouverte. Elle montre la fenêtre Gazebo (vue extérieure, avec la cible rouge) à côté de QGroundControl (mode, batterie, distance au départ, cap). Le GIF montre ce que voit le drone, la vidéo montre ce que fait le drone. La carte est la position de départ simulée par défaut de PX4, pas un lieu réel.
+
+[![Enregistrement d'écran du vol de suivi](results/simulation_vol_poster.jpg)](results/simulation_vol.mp4)
 
 **Taille apparente de la cible.** Ajustée sur les 211 images de ce vol (altitude 3 m) : taille ≈ 0,65 % × (10 m / distance)^2,03, la loi en inverse du carré attendue par la géométrie. La distance d'arrêt en découle.
 
@@ -140,7 +144,7 @@ Testé sous Ubuntu 24.04 avec ROS 2 Jazzy et la version de Gazebo (`gz sim`) ins
 Ouvrir un terminal par étape, dans cet ordre :
 
 ```bash
-# 1. Simulation sans fenêtre Gazebo
+# 1. Simulation sans fenêtre Gazebo (retirer HEADLESS=1 pour regarder le vol ou enregistrer une vidéo)
 cd ~/PX4-Autopilot && HEADLESS=1 make px4_sitl gz_x500_mono_cam
 
 # 2. Liaison PX4 <-> ROS 2
