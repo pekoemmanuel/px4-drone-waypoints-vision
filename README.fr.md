@@ -88,7 +88,7 @@ Environ 47 s de l'armement à la fin de l'atterrissage. La cible a été vue sur
 
 Le GIF montre la vue de la caméra avec le cadre de détection et l'état du suivi. Ce vol a été effectué avec la fenêtre Gazebo ouverte, comme sur la vidéo ci-dessous. La caméra a fourni environ 8 images/s, donc le GIF se lit environ 25 % plus vite que le temps réel.
 
-**Vidéo du vol.** [`results/simulation_vol.mp4`](results/simulation_vol.mp4) (72 s, 5,4 Mo) est un enregistrement d'écran du vol de suivi analysé ci-dessus : les figures, le GIF et la cadence de la caméra viennent tous de ce même vol, effectué avec la fenêtre Gazebo ouverte. Elle montre la fenêtre Gazebo (vue extérieure, avec la cible rouge) à côté de QGroundControl (mode, batterie, distance au départ, cap). Le GIF montre ce que voit le drone, la vidéo montre ce que fait le drone. La carte est la position de départ simulée par défaut de PX4, pas un lieu réel.
+**Vidéo du vol.** [`results/simulation_vol.mp4`](https://github.com/user-attachments/assets/a7f12d11-541c-4293-b62c-20c461c47693) (72 s, 5,4 Mo) est un enregistrement d'écran du vol de suivi analysé ci-dessus : les figures, le GIF et la cadence de la caméra viennent tous de ce même vol, effectué avec la fenêtre Gazebo ouverte. Elle montre la fenêtre Gazebo (vue extérieure, avec la cible rouge) à côté de QGroundControl (mode, batterie, distance au départ, cap). Le GIF montre ce que voit le drone, la vidéo montre ce que fait le drone. La carte est la position de départ simulée par défaut de PX4, pas un lieu réel.
 
 [![Enregistrement d'écran du vol de suivi](results/simulation_vol_poster.jpg)](results/simulation_vol.mp4)
 
